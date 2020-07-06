@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 10:53:15 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/02 13:13:52 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/06 16:59:26 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 #include <ctype.h>
 #define LEN 25
 
-/*
-int		main(int argc, char **argv)
+
+/*int		main(int argc, char **argv)
 {
 //	int		fd;
 //	int		a;
@@ -26,10 +26,9 @@ int		main(int argc, char **argv)
 //	a = 4;
 	if (argc < 2)
 	{
-		printf("ERROR: No arguments given!\n");
+		ft_putstr("\033[31mERROR: No arguments given!\033[0m\n");
 		return (0);
-	}
-*/
+	}*/
 
 //int		main(void)
 //{
@@ -69,9 +68,9 @@ int		main(int argc, char **argv)
 	size_t a = 2, b = 10, c = 20;
 	int x = 'a', y = 'k';
 
-	printf(ft_memchr(source, x, a) == memchr(source, x, a) ? "ft_memchr Test1: OK!\n" : "ft_memchr Test1: Fails...\n");
-	printf(ft_memchr(source, x, b) == memchr(source, x, b) ? "ft_memchr Test2: OK!\n" : "ft_memchr Test2: Fails...\n");
-	printf(ft_memchr(source, y, c) == memchr(source, y, c) ? "ft_memchr Test3: OK!\n" : "ft_memchr Test3: Fails...\n");
+	ft_putstr(ft_memchr(source, x, a) == memchr(source, x, a) ? "ft_memchr \033[32mTest1: OK!\033[0m\n" : "ft_memchr \033[31mTest1: Fails...\033[0m\n");
+	ft_putstr(ft_memchr(source, x, b) == memchr(source, x, b) ? "ft_memchr \033[32mTest2: OK!\033[0m\n" : "ft_memchr \033[31mTest2: Fails...\033[0m\n");
+	ft_putstr(ft_memchr(source, y, c) == memchr(source, y, c) ? "ft_memchr \033[32mTest3: OK!\033[0m\n" : "ft_memchr \033[31mTest3: Fails...\033[0m\n");
 	return (0);
 }*/
 
@@ -84,10 +83,10 @@ int		main(int argc, char **argv)
 	char	s4[] = "KEKE Orava";
 	char	s5[] = "          ";
 
-	printf(ft_memcmp(s1, s2, 11) == memcmp(s1, s2, 11) ? "ft_memcmp Test1: OK!\n" : "ft_memcmp Test1: Fails...\n");
-	ft_putstr(ft_memcmp(s1, s3, 11) == memcmp(s1, s3, 11) ? "ft_memcmp Test2: OK!\n" : "ft_memcmp Test2 Fails...\n");
-	ft_putstr(ft_memcmp(s1, s4, 11) == memcmp(s1, s4, 11) ? "ft_memcmp Test3: OK!\n" : "ft_memcmp Test3: Fails...\n");
-	ft_putstr(ft_memcmp(s1, s5, 11) == memcmp(s1, s5, 11) ? "ft_memcmp Test4: OK!\n" : "ft_memcmp Test4: Fails...\n");
+	ft_putstr(ft_memcmp(s1, s2, 11) == memcmp(s1, s2, 11) ? "ft_memcmp \033[32mTest1: OK!\033[0m\n" : "ft_memcmp \033[31mTest1: Fails...\033[0m\n");
+	ft_putstr(ft_memcmp(s1, s3, 11) == memcmp(s1, s3, 11) ? "ft_memcmp \033[32mTest2: OK!\033[0m\n" : "ft_memcmp \033[31mTest2: Fails...\033[0m\n");
+	ft_putstr(ft_memcmp(s1, s4, 11) == memcmp(s1, s4, 11) ? "ft_memcmp \033[32mTest3: OK!\033[0m\n" : "ft_memcmp \033[31mTest3: Fails...\033[0m\n");
+	ft_putstr(ft_memcmp(s1, s5, 11) == memcmp(s1, s5, 11) ? "ft_memcmp \033[32mTest4: OK!\033[0m\n" : "ft_memcmp \033[31mTest4: Fails...\033[0m\n");
 	return (0);
 }*/
 
@@ -117,7 +116,25 @@ int		main(int argc, char **argv)
     	printf("%d ", arr[i++]);
     printf("\n");
 */
+
+// TEST ft_memdel
+/*int		main(void)
+{
+	void	*arr;
+
+	if (!(arr = ft_memalloc(10)))
+		return (0);
+	ft_memdel(&arr);
+	ft_putstr((arr == NULL) ? "ft_memdel \033[32mTest1: OK!\033[0m\n" : "ft_memdel \033[31mTest1: Fails...\033[0m\n");
+	if (!(arr = ft_memalloc(0)))
+		return (0);
+	ft_memdel(&arr);
+	ft_putstr((arr == NULL) ? "ft_memdel \033[32mTest2: OK!\033[0m\n" : "ft_memdel \033[31mTest2: Fails...\033[0m\n");
+	return (0);
+}*/
+
 //	ft_memmove(src+5, src, ft_strlen(src)+1) && printf("ft_memmove output: %s\n", src) && memmove(src, src, ft_strlen(src)+1) && printf("memmove output is: %s\n", src);
+
 /*	ft_memset(arr, a, LEN);
 	printf("ft_memset output: ");
 	i = 0;
@@ -135,7 +152,7 @@ int		main(int argc, char **argv)
 //	ft_putnbr(a);
 //	ft_putnbr_fd(a, fd);
 
-//TEST ft_putchar
+// ft_putchar
 /*int		main(void)
 {
 	char a = 'k', b = '5', c = 'E';
@@ -161,9 +178,74 @@ int		main(int argc, char **argv)
 //	ft_putendl(argv[1]);
 //	ft_putendl_fd(argv[1], fd);
 //	printf("ft_atoi output: %d\n", ft_atoi(argv[1])) && printf("atoi output is: %d\n", atoi(argv[1]));
+
+// TEST ft_strcat
+/*int		main(void)
+{
+	char	s1[100] = "Keke";
+	char	*s2 = "Orava";
+	
+	printf("%s\n", ft_strcat(s1, s2));
+	return (0);
+}*/
+
+// TEST ft_strncat
+/*int		main(void)
+{
+	char	s1[100] = "Keke";
+	char	*s2 = "Orava";
+	size_t	n = 1;
+	
+	printf("%s\n", ft_strncat(s1, s2, n));
+	return (0);
+}*/
+
+// TEST ft_strlcat
+
+#include <unistd.h>
+
+void    ft_print_result(int n)
+{
+    char c;
+
+    if (n >= 10)
+        ft_print_result(n / 10);
+    c = n % 10 + '0';
+    write (1, &c, 1);
+}
+
+int        main(void)
+{
+    char    *dest;
+    
+    if (!(dest = (char *)malloc(sizeof(*dest) * 15)))
+        return (0);
+   	memset(dest, 0, 15);
+    memset(dest, 'r', 6);
+	ft_print_result(ft_strlcat(dest, "lorem ipsum dolor sit amet", 5));
+	write(1, "\n", 1);
+	write(1, dest, 15);
+    return (0);
+}
+
 //	printf("ft_strcmp output: %d\n", ft_strcmp(argv[1], argv[2])) && printf("strcmp output is: %d\n", strcmp(argv[1], argv[2]));
 //	printf("ft_strncmp output: %d\n", ft_strncmp(argv[1], argv[2], a)) && printf("strncmp output is: %d\n", strncmp(argv[1], argv[2], a));
 //	printf("ft_strcpy output: %s\n", ft_strcpy(destination, source)) && printf("strcpy output is: %s\n", strcpy(destination, source));
+
+// TEST ft_strncpy
+/*int		main(void)
+{
+	char	src[] = "Keke Orava";
+	char	dst[25];
+	size_t	a = 6, b = 2, c = 16;
+
+	ft_putstr(ft_strncpy(dst, src, a) == strncpy(dst, src, a) ? "ft_strncpy \033[32mTest1: OK!\033[0m\n" : "ft_strncpy \033[31mTest1: Fails...\033[0m\n");
+	ft_putstr(ft_strncpy(dst, "", b) == strncpy(dst, "", b) ? "ft_strncpy \033[32mTest2: OK!\033[0m\n" : "ft_strncpy \033[31mTest2: Fails...\033[0m\n");
+	ft_putstr(ft_strncpy(dst, src, sizeof(src)) == strncpy(dst, src, sizeof(src)) ? "ft_strncpy \033[32mTest3: OK!\033[0m\n" : "ft_strncpy \033[31mTest3: Fails...\033[0m\n");
+	ft_putstr(ft_strncpy(dst, "morjensta poytaan", c) == strncpy(dst, "morjensta poytaan", c) ? "ft_strncpy \033[32mTest4: OK!\033[0m\n" : "ft_strncpy \033[31mTest4: Fails...\033[0m\n");
+	return (0);
+}*/
+
 //	printf("ft_strdup output: %s\n", ft_strdup(argv[1])) && printf("strdup output is: %s\n", strdup(argv[1]));
 //	printf("ft_strequ output: %d\n", ft_strequ(argv[1], argv[2]));
 //	printf("ft_strnequ output: %d\n", ft_strnequ(argv[1], argv[2], a));
