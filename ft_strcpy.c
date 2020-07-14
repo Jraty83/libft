@@ -6,19 +6,22 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 11:20:29 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/01 09:47:02 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/03 15:03:20 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strcpy(char *dst, const char *src)
 {
-	char	*ptr;
+	size_t	i;
 
-	ptr = dst;
-	while (*src)
+	i = 0;
+	while (src[i])
 	{
-		*dst++ = *src++;
+		dst[i] = src[i];
+		++i;
 	}
-	*dst = '\0';
-	return (ptr);
+	dst[i] = '\0';
+	return (dst);
 }

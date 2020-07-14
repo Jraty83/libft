@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 15:02:06 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/10 14:25:39 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/14 12:06:18 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*node;
 
-	if (!(node = (t_list*)malloc(sizeof(*node))))
+	if (!(node = (t_list*)malloc(sizeof(t_list))))
 		return (NULL);
 	if (!content)
 	{
