@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 10:53:15 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/10 16:46:22 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/13 18:27:25 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,17 +68,17 @@
 	char	arr[LEN];
 
 	ft_memcpy(arr, source, a);
-    printf("ft_memcpy output: ");
-    i = 0;
-    while(i < LEN)
-        printf("%d ", arr[i++]);
-    printf("\n");
+	printf("ft_memcpy output: ");
+	i = 0;
+	while(i < LEN)
+		printf("%d ", arr[i++]);
+	printf("\n");
 	memcpy(arr, source, a);
-    printf("memcpy output is: ");
-    i = 0;
-    while(i < LEN)
-    	printf("%d ", arr[i++]);
-    printf("\n");
+	printf("memcpy output is: ");
+	i = 0;
+	while(i < LEN)
+		printf("%d ", arr[i++]);
+	printf("\n");
 	return (0);
 }*/
 
@@ -308,13 +308,27 @@ int		main(void)
 /*int		main(void)
 {
 	char *ptr;
-	
+
 	ptr = ft_strnstr("lorem ipsum dolor sit amet", "sit", 10);
-	printf("%s\n", ptr);
+	printf("ft_strnstr output: %s\n", ptr);
+	ptr = strnstr("lorem ipsum dolor sit amet", "sit", 10);
+	printf("strnstr output is: %s\n", ptr);
 	ptr = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
-	printf("%s\n", ptr);
+	printf("ft_strnstr output: %s\n", ptr);
+	ptr = strnstr("lorem ipsum dolor sit amet", "dolor", 15);
+	printf("strnstr output is: %s\n", ptr);
 	ptr = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0);
-	printf("%s\n", ptr);
+	printf("ft_strnstr output: %s\n", ptr);
+	ptr = strnstr("lorem ipsum dolor sit amet", "dolor", 0);
+	printf("strnstr output is: %s\n", ptr);
+	ptr = ft_strnstr("", "", 0);
+	printf("ft_strnstr output: %s\n", ptr);
+	ptr = strnstr("", "", 0);
+	printf("strnstr output is: %s\n", ptr);
+	ptr = ft_strnstr("lorem ipsum dolor sit amet", "", 0);
+	printf("ft_strnstr output: %s\n", ptr);
+	ptr = strnstr("lorem ipsum dolor sit amet", "", 0);
+	printf("strnstr output is: %s\n", ptr);
 	return (0);
 }*/
 
@@ -461,7 +475,7 @@ int		main(void)
 }*/
 
 // TEST ft_strnew
-/*int		main(void)
+int		main(void)
 {
 	size_t	a = 15, b = 3, c = 42, i = 0;
 	char	ar1[a], ar2[b], ar3[c];
@@ -484,7 +498,7 @@ int		main(void)
 		printf("%d ", ar3[i++]);
 	printf("\n");
 	return (0);
-}*/
+}
 
 // TEST ft_strdel
 /*int		main(void)
@@ -824,7 +838,7 @@ int		main(void)
 }*/
 
 // TEST ft_lstdelone
-void	del(void *s, size_t size)
+/*void	del(void *s, size_t size)
 {
 	(void)size;
 	free(s);
@@ -849,7 +863,136 @@ int		main(void)
 	if (elem2 ? printf("elem2 content: %s\n", elem2->content) : printf("elem2 content: NULL\n"))
 	if (elem3 ? printf("elem3 content: %s\n", elem3->content) : printf("elem3 content: NULL\n"))
 	return (0);
+}*/
+
+// TEST ft_lstdel
+/*static int	delcount;
+
+static void		del(void *s, size_t size)
+{
+	(void)size;
+	free(s);
+	delcount++;
 }
+
+int		main(void)
+{
+	t_list	*elem, *elem2, *elem3, *elem4;
+	
+	char	str[] = "Keke", str2[] = "Orava", str3[] = "inda", str4[] = "house";
+
+	if (!(elem = ft_lstnew(str, (sizeof(str)))))
+		printf("NULL");
+	if (!(elem2 = ft_lstnew(str2, (sizeof(str2)))))
+		printf("NULL");
+	if (!(elem3 = ft_lstnew(str3, (sizeof(str3)))))
+		printf("NULL");
+	if (!(elem4 = ft_lstnew(str4, (sizeof(str4)))))
+		printf("NULL");
+	elem->next = elem2;
+	elem2->next = elem3;
+	elem3->next = elem4;
+	ft_lstdel(&elem3, &del);
+	if (elem ? printf("elem1 content: %s\n", elem->content) : printf("elem1 content: NULL\n"))
+	if (elem2 ? printf("elem2 content: %s\n", elem2->content) : printf("elem2 content: NULL\n"))
+	if (elem3 ? printf("elem3 content: %s\n", elem3->content) : printf("elem3 content: NULL\n"))
+	if (elem4 ? printf("delcount is: %d\n", delcount) : printf("elem4 content: NULL\n"))
+	return (0);
+}*/
+
+// TEST ft_lstadd
+/*int		main(void)
+{
+	t_list	*elem, *elem2, *elem3, *new;
+	
+	char	str[] = "Keke", str2[] = " ", str3[] = "Orava";
+
+	if (!(elem = ft_lstnew(str, (sizeof(str)))))
+		printf("NULL");
+	if (!(elem2 = ft_lstnew(str2, (sizeof(str2)))))
+		printf("NULL");
+	if (!(elem3 = ft_lstnew(str3, (sizeof(str3)))))
+		printf("NULL");
+	new = NULL;
+	ft_lstadd(&new, elem3);
+	ft_lstadd(&new, elem2);
+	ft_lstadd(&new, elem);
+	while (new)
+	{
+		printf("%s\n", new->content);
+		new = new->next;
+	}
+	return (0);
+}*/
+
+// TEST ft_lstiter
+/*void	print(t_list *elem)
+{
+	if (elem ? printf("elem content: %s\n", elem->content) : printf("elem content: NULL\n"))
+	return ;
+}
+
+int		main(void)
+{
+	t_list	*elem, *elem2, *elem3;
+	
+	char	str[] = "Keke", str2[] = " ", str3[] = "Orava";
+
+	if (!(elem = ft_lstnew(str, (sizeof(str)))))
+		printf("NULL");
+	if (!(elem2 = ft_lstnew(str2, (sizeof(str2)))))
+		printf("NULL");
+	if (!(elem3 = ft_lstnew(str3, (sizeof(str3)))))
+		printf("NULL");
+	elem->next = elem2;
+	elem2->next = elem3;
+	ft_lstiter(elem, &print);
+	return (0);
+}*/
+
+// TEST ft_lstmap
+/*t_list	*map(t_list *elem)
+{
+	int		i;
+	t_list	*new_elem;
+
+	new_elem = ft_lstnew(elem->content, elem->content_size);
+	if (!new_elem)
+		return (0);
+	i = 0;
+	while (((char *)new_elem->content)[i])
+	{
+		((char *)new_elem->content)[i] = 'y';
+		i++;
+	}
+	return (new_elem);
+}
+
+int		main(void)
+{
+	t_list	*elem, *elem2, *elem3, *list;
+	
+	char	str[] = "Keke", str2[] = " ", str3[] = "Orava";
+
+	if (!(elem = ft_lstnew(str, (sizeof(str)))))
+		printf("NULL");
+	if (!(elem2 = ft_lstnew(str2, (sizeof(str2)))))
+		printf("NULL");
+	if (!(elem3 = ft_lstnew(str3, (sizeof(str3)))))
+		printf("NULL");
+	elem->next = elem2;
+	elem2->next = elem3;
+	if (!(list = ft_lstmap(elem, &map)))
+		return (0);
+	if (list == elem)
+		printf("A new list is not returned\n");
+	while (list)
+	{
+		printf("%s\n", list->content);
+		list = list->next;
+	}
+	return (0);
+}*/
 
 ///////// EXTRA /////////
 
