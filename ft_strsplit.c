@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 15:01:03 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/24 11:56:10 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/24 12:13:28 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char		**ft_strsplit(char const *s, char c)
 	words = ft_count_words(s, c);
 	if (!(str = (char**)malloc(sizeof(char*) * (words + 1))))
 		return (NULL);
-	while (words > 0)
+	while (words--)
 	{
 		while (*s == c)
 			++s;
@@ -63,7 +63,6 @@ char		**ft_strsplit(char const *s, char c)
 		while (*s && *s != c)
 			++s;
 		++i;
-		--words;
 	}
 	str[i] = 0;
 	return (str);
