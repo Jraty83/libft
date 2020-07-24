@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 15:01:03 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/24 09:53:56 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/24 11:56:10 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char		**ft_strsplit(char const *s, char c)
 			++s;
 		if (!(str[i] = ft_strsub(s, 0, ft_count_len(s, c))))
 		{
-			free(str);
+			ft_free2d(str);
 			return (NULL);
 		}
 		while (*s && *s != c)
