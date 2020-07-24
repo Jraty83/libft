@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 11:32:32 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/01 09:47:27 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/24 15:34:18 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
-	{
+	while (*s++)
 		++i;
-	}
 	return (i);
 }

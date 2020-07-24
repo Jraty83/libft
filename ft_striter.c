@@ -6,13 +6,13 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 10:23:35 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/16 13:38:34 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/24 13:44:27 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (!s)
+	if (!(s && f))
 		return ;
 	while (*s)
 	{

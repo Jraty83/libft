@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 15:01:03 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/24 12:13:28 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/24 14:22:14 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_count_words(const char *s, char c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (*s)
 	{
 		while (*s == c)
