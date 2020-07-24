@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 14:34:04 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/24 10:41:31 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/24 10:54:18 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,10 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	i = 0;
-	if (!(*s))
+	if (!(*s && (sub = (char*)malloc(sizeof(char) * (len + 1)))))
 		return (NULL);
-	if (!(sub = (char*)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	while (s[start] != '\0' && len > 0)
-	{
+	while (s[start] && len--)
 		sub[i++] = s[start++];
-		--len;
-	}
 	sub[i] = '\0';
 	return (sub);
 }
