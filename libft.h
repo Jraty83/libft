@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 11:13:42 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/24 11:53:50 by jraty            ###   ########.fr       */
+/*   Updated: 2020/07/29 15:35:36 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ int					ft_isnumber(int c);
 char				*ft_strndup(const char *s1, size_t n);
 int					ft_strclen(const char *s, char c);
 void				ft_free2d(char **arr);
+size_t				ft_count_lines(char *s);
 
 #endif
