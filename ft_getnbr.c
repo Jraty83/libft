@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_getnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 14:42:46 by jraty             #+#    #+#             */
-/*   Updated: 2020/12/03 15:03:27 by jraty            ###   ########.fr       */
+/*   Created: 2020/10/07 14:27:08 by jraty             #+#    #+#             */
+/*   Updated: 2020/10/07 14:28:05 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 0 = Invalid file
-// 1 = No data found.
-
-void	ft_error(int err)
+int		ft_getnbr(char *str)
 {
-	if (err == 0)
-		ft_putendl_fd("Invalid file", 2);
-	if (err == 1)
-		ft_putendl_fd("No data found.", 2);
-	exit(0);
+	size_t	i;
+	int		result;
+
+	result = 0;
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+		result = (result * 10) + (str[i++] - 48);
+	if (str[0] == '-')
+		result *= -1;
+	return (result);
 }

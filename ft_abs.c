@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 14:42:46 by jraty             #+#    #+#             */
-/*   Updated: 2020/12/03 15:03:27 by jraty            ###   ########.fr       */
+/*   Created: 2020/10/14 15:51:19 by jraty             #+#    #+#             */
+/*   Updated: 2020/10/14 15:59:21 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-// 0 = Invalid file
-// 1 = No data found.
-
-void	ft_error(int err)
+int		ft_abs(int n)
 {
-	if (err == 0)
-		ft_putendl_fd("Invalid file", 2);
-	if (err == 1)
-		ft_putendl_fd("No data found.", 2);
-	exit(0);
+	if (n < 0)
+		return (-n);
+	else
+		return (n);
 }

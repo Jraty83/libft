@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_sqrt_roundup.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 14:42:46 by jraty             #+#    #+#             */
-/*   Updated: 2020/12/03 15:03:27 by jraty            ###   ########.fr       */
+/*   Created: 2020/06/03 13:19:58 by jraty             #+#    #+#             */
+/*   Updated: 2020/08/14 11:09:50 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-// 0 = Invalid file
-// 1 = No data found.
-
-void	ft_error(int err)
+int		ft_sqrt_roundup(int nb)
 {
-	if (err == 0)
-		ft_putendl_fd("Invalid file", 2);
-	if (err == 1)
-		ft_putendl_fd("No data found.", 2);
-	exit(0);
+	int		sq;
+
+	if (nb == 0 || nb == 1)
+		return (nb);
+	sq = 1;
+	while ((sq * sq) <= nb)
+	{
+		if ((sq * sq) == nb)
+			return (sq);
+		sq += 1;
+	}
+	return (sq);
 }
