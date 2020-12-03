@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 11:13:42 by jraty             #+#    #+#             */
-/*   Updated: 2020/09/16 15:07:33 by jraty            ###   ########.fr       */
+/*   Updated: 2020/12/03 14:50:26 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,6 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-void				ft_lstfree(t_list **ptr);
 
 int					ft_isupper(int c);
 int					ft_islower(int c);
@@ -95,6 +94,11 @@ char				*ft_strndup(const char *s1, size_t n);
 int					ft_strclen(const char *s, char c);
 void				ft_free2d(char **arr);
 size_t				ft_count_lines(char *s);
+
 int					get_next_line(const int fd, char **line);
+int					ft_sqrt_roundup(int nb);
+int					ft_getnbr(char *str);
+int					ft_abs(int n);
+void				ft_error(int err);
 
 #endif
