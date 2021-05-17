@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 10:53:15 by jraty             #+#    #+#             */
-/*   Updated: 2021/05/17 09:36:42 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 13:12:07 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -676,7 +676,7 @@ int		main(void)
 }*/
 
 // TEST ft_strsplit
-int		main(void)
+/*int		main(void)
 {
 	char	**arr;
 
@@ -699,7 +699,7 @@ int		main(void)
 		printf("%s\n", *arr++);
 	}
 	return (0);
-}
+}*/
 
 // TEST ft_itoa
 /*int		main(int argc, char **argv)
@@ -951,7 +951,7 @@ int		main(void)
 }*/
 
 // TEST ft_lstmap
-/*t_list	*map(t_list *elem)
+/*static	t_list	*map(t_list *elem)
 {
 	int		i;
 	t_list	*new_elem;
