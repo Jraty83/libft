@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 11:02:09 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/06 12:10:29 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:07:48 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (s1[i])

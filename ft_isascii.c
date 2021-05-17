@@ -6,11 +6,11 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/16 11:31:52 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/01 09:44:52 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:12:22 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

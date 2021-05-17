@@ -6,11 +6,11 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:34:52 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/08 12:37:15 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:11:57 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_islower(int c)
+int	ft_islower(int c)
 {
 	return (c >= 'a' && c <= 'z');
 }

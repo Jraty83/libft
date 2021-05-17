@@ -6,13 +6,13 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 14:27:08 by jraty             #+#    #+#             */
-/*   Updated: 2020/10/07 14:28:05 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:12:54 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_getnbr(char *str)
+int	ft_getnbr(char *str)
 {
 	size_t	i;
 	int		result;

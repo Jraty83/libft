@@ -6,11 +6,11 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 13:19:58 by jraty             #+#    #+#             */
-/*   Updated: 2020/08/14 11:09:50 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:00:58 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt_roundup(int nb)
+int	ft_sqrt_roundup(int nb)
 {
 	int		sq;
 

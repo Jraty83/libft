@@ -6,11 +6,11 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 09:44:16 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/01 14:46:53 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:00:38 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;

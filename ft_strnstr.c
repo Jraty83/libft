@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 09:46:51 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/14 13:14:58 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:10:05 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strnstr(const char *hayst, const char *ndl, size_t len)
 
 	n = ft_strlen(ndl);
 	if (!(*ndl))
-		return ((char*)hayst);
+		return ((char *)hayst);
 	while (*hayst && (n <= len--))
 	{
 		if (ft_strncmp(hayst, ndl, n) == 0)
-			return ((char*)hayst);
+			return ((char *)hayst);
 		hayst++;
 	}
 	return (NULL);

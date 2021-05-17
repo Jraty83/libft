@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 09:56:33 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/01 17:30:43 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:08:07 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (src < dst)
 	{
 		while (len--)
-			((char*)dst)[len] = ((char*)src)[len];
+			((char *)dst)[len] = ((char *)src)[len];
 		return (dst);
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 14:30:06 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/07 09:16:55 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:09:39 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (*s)
 		s++;
 	if ((char)c == '\0')
-		return ((char*)s);
+		return ((char *)s);
 	s--;
 	while (*s != (char)c && s_len--)
 		s--;

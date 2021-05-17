@@ -6,11 +6,11 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:24:10 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/08 12:25:11 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:12:13 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isupper(int c)
+int	ft_isupper(int c)
 {
 	return (c >= 'A' && c <= 'Z');
 }

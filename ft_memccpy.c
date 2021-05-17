@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 12:00:54 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/01 14:27:07 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:08:35 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	*d;
 	unsigned char	*s;
 
-	d = (unsigned char*)dst;
-	s = (unsigned char*)src;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
 	while (n--)
 	{
 		*d = *s;
 		if (*d++ == (unsigned char)c)
-			return ((void*)d);
+			return ((void *)d);
 		s++;
 	}
 	return (NULL);

@@ -6,11 +6,11 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 13:21:25 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/08 13:30:36 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 12:01:51 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strclen(const char *s, char c)
+int	ft_strclen(const char *s, char c)
 {
 	int		i;
 
