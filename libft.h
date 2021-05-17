@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 11:13:42 by jraty             #+#    #+#             */
-/*   Updated: 2020/12/03 15:26:48 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 13:18:29 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	size_t			content_size;
