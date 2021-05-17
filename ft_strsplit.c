@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 15:01:03 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/24 14:22:14 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 09:32:46 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_count_len(const char *s, char c)
 	return (i);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 	int		words;
@@ -51,13 +51,15 @@ char		**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	words = ft_count_words(s, c);
-	if (!(str = (char**)malloc(sizeof(char*) * (words + 1))))
+	str = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!str)
 		return (NULL);
 	while (words--)
 	{
 		while (*s == c)
 			++s;
-		if (!(str[i] = ft_strsub(s, 0, ft_count_len(s, c))))
+		str[i] = ft_strsub(s, 0, ft_count_len(s, c));
+		if (!str[i])
 		{
 			ft_free2d(str);
 			return (NULL);

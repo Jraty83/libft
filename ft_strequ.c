@@ -6,11 +6,11 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 11:38:47 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/16 13:37:32 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 09:23:55 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strequ(char const *s1, char const *s2)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	if (!(s1 && s2))
 		return (0);

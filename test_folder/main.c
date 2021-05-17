@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 10:53:15 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/16 14:34:55 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/17 09:36:42 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -676,7 +676,7 @@ int		main(void)
 }*/
 
 // TEST ft_strsplit
-/*int		main(void)
+int		main(void)
 {
 	char	**arr;
 
@@ -692,14 +692,14 @@ int		main(void)
 	{
 		printf("%s\n", *arr++);
 	}
-	printf("\nlorem ipsum dolor sit amet., 'z':\n");
-	arr = ft_strsplit("lorem ipsum dolor sit amet.", 'z');
+	printf("\nlorem ipsum dolor sit amet., ' ':\n");
+	arr = ft_strsplit("lorem ipsum dolor sit amet.", ' ');
 	while (*arr)
 	{
 		printf("%s\n", *arr++);
 	}
 	return (0);
-}*/
+}
 
 // TEST ft_itoa
 /*int		main(int argc, char **argv)
