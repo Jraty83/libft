@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 14:00:35 by jraty             #+#    #+#             */
-/*   Updated: 2020/08/17 10:41:38 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/20 19:26:42 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,17 @@ static int	ft_get_line(char **s, char **line)
 	return (1);
 }
 
-int			get_next_line(const int fd, char **line)
+static int	ft_return_value(int ret, char **s, char **line)
+{
+	if (ret == -1)
+		return (-1);
+	else if (*s == NULL)
+		return (0);
+	else
+		return (ft_get_line(s, line));
+}
+
+int	get_next_line(const int fd, char **line)
 {
 	static char	*s[FD];
 	char		*tmp;
@@ -42,7 +52,8 @@ int			get_next_line(const int fd, char **line)
 
 	if (fd < 0 || line == NULL)
 		return (-1);
-	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
+	ret = read(fd, buf, BUFF_SIZE);
+	while (ret > 0)
 	{
 		buf[ret] = '\0';
 		if (s[fd] == NULL)
@@ -52,8 +63,7 @@ int			get_next_line(const int fd, char **line)
 		s[fd] = tmp;
 		if (ft_strchr(s[fd], '\n') != NULL)
 			break ;
+		ret = read(fd, buf, BUFF_SIZE);
 	}
-	if (ret == -1)
-		return (-1);
-	return (s[fd] == NULL ? 0 : ft_get_line(&s[fd], line));
+	return (ft_return_value(ret, &s[fd], line));
 }
