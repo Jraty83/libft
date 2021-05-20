@@ -6,7 +6,7 @@
 /*   By: jraty <jraty@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 11:46:47 by jraty             #+#    #+#             */
-/*   Updated: 2020/07/01 09:45:20 by jraty            ###   ########.fr       */
+/*   Updated: 2021/05/20 18:43:56 by jraty            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,31 +36,29 @@ static int	ft_digit_count(int n)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
+	long	ln;
 
 	len = ft_digit_count(n);
-	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	str[len--] = '\0';
-	if (n == -2147483648)
-	{
-		str[len--] = '8';
-		n /= 10;
-	}
-	if (n < 0)
+	ln = (long)n;
+	if (ln < 0)
 	{
 		str[0] = '-';
-		n = -n;
+		ln = -ln;
 	}
-	if (n == 0)
+	if (ln == 0)
 		str[0] = '0';
-	while (n > 0)
+	while (ln > 0)
 	{
-		str[len--] = n % 10 + '0';
-		n = n / 10;
+		str[len--] = ln % 10 + '0';
+		ln = ln / 10;
 	}
 	return (str);
 }
